@@ -86,7 +86,7 @@ func (trie *PatriciaTrie) lookup(node *Node, ip *net.IPNet) *Node {
 	}
 
 	// Recursively lookup the IP address in the child node.
-	return trie.lookup(node.children[ip[0]], ip)
+	return trie.lookup(node.children[ip.IP[0]], ip)
 }
 
 // GetNetblock returns the node in the trie that represents the netblock.
